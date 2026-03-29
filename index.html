@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selecione o perfil para começar a assistir">
+    <title>Netflix - Selecione seu perfil</title>
+    <link   rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Quem está assistindo?</h1>
+            <button id="theme-toggle" aria-label="Alternar entre modo escuro e claro">🌙</button>
+        </header>
+
+        <section class="profiles" aria-label="Seleção de perfis">
+            <ul>
+                <li>
+                    <a href="catalogo/catalogo.html?profile=Rower" class="profile" data-name="Rower" data-image="assets/perfil 1.jpg" aria-label="Selecionar perfil Rower">
+                        <img src="assets/perfil 1.jpg" alt="Um guerreiro veterano e resiliente, equipado com trajes de couro e arco, observa severamente em meio a uma 
+                        floresta densa e montanhosa sob um céu crepuscular.">
+                        <figcaption>Rower</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalogo/catalogo.html?profile=Klein" class="profile" data-name="Klein" data-image="assets/perfil 3.png" aria-label="Selecionar perfil Klein">
+                        <img src="assets/perfil 3.png" alt="uerreiro brutal e calejado, trajado com uma armadura pesada e danificada e empunhando uma espada colossal, 
+                            cuja aparência intensa e sombria transmite uma atmosfera de força implacável e sobrevivência em um cenário caótico e opressor.">
+                        <figcaption>Klein</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalogo/catalogo.html?profile=Karen" class="profile" data-name="Karen" data-image="assets/perfil 2.jpg" aria-label="Selecionar perfil Karen">
+                        <img src="assets/perfil 2.jpg" alt="Um guerreiro veterano e resiliente, equipado com trajes de couro e arco, observa severamente em meio a uma 
+                        floresta densa e montanhosa sob um céu crepuscular.">
+                        <figcaption>Karen</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalogo/catalogo.html?profile=Lara" class="profile" data-name="Lara" data-image="assets/perfil 4.png" aria-label="Selecionar perfil Lara">
+                        <img src="assets/perfil 4.png" alt="Uma guardiã da floresta mística e serena, com síndrome de Down, adornada com elementos naturais e segurando 
+                        um cajado de cristal, sorri calorosamente em um cenário mágico de Lothlórien durante a hora dourada.">
+                        <figcaption>Lara</figcaption>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <div class="manage-profiles">
+            <a href="#">GERENCIAR PERFIS</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

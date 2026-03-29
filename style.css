@@ -1,0 +1,301 @@
+/* Netflix-inspired styles */
+
+body {
+    /* Fundo escuro no dark mode (padrão) */
+    background-color: #000000;
+    /* Letras brancas no dark mode */
+    color: #ffffff;
+    /* Define a família de fontes */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Transição suave */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    /* Alinha o texto ao centro */
+    text-align: center;
+    /* Define a largura máxima do elemento principal */
+    max-width: 1200px;
+    /* Define a largura como 100% para responsividade */
+    width: 100%;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    /* Letras brancas no dark mode */
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.profiles ul, .profiles ol {
+    /* Remove os marcadores da lista */
+    list-style: none;
+    /* Remove o preenchimento interno da lista */
+    padding: 0;
+    margin: 0;
+    /* Define o layout como flexbox para os perfis */
+    display: flex;
+    /* Centraliza os itens flex horizontalmente */
+    justify-content: center;
+    /* Define o espaço entre os itens flex */
+    gap: 0.1rem;
+    /* Mantém todos os perfis em uma linha horizontal */
+    flex-wrap: nowrap;
+}
+
+.profiles li {
+    /* Remove a margem dos itens da lista */
+    margin: 0;
+}
+
+.profile {
+    /* Remove estilos padrão do botão/link */
+    border: none;
+    background: none;
+    padding: 0;
+    /* Alinha o texto ao centro no perfil */
+    text-align: center;
+    /* Define uma transição suave para transformações */
+    transition: transform 0.3s ease;
+    /* Permite foco para acessibilidade */
+    outline: none;
+    /* Remove sublinhado do link */
+    text-decoration: none;
+    /* Herda a cor do texto */
+    color: inherit;
+}
+
+.profile img {
+    /* Define a largura da imagem */
+    width: 120px;
+    /* Define a altura da imagem */
+    height: 120px;
+    /* Define o raio da borda para arredondar os cantos */
+    border-radius: 4px;
+    /* Ajusta a imagem para cobrir o espaço sem distorcer */
+    object-fit: cover;
+    /* Define uma borda transparente de 3px */
+    border: 3px solid transparent;
+}
+
+.profile:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.profile:hover img {
+    border: 1px solid #ffffff;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    /* Letras brancas no dark mode */
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para o link "Gerenciar perfis" */
+.manage-profiles {
+    text-align: center;
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #666666;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.manage-profiles:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.manage-profiles a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.manage-profiles a:hover {
+    color: #ffffff;
+}
+
+/* Estilos para o botão de alternância de tema */
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    /* Cor branca no dark mode */
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: #e50914; /* Cor do Netflix */
+}
+
+/* Modo claro */
+.light-mode body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode header h1 {
+    color: #000000;
+}
+
+.light-mode figcaption {
+    color: #000000;
+}
+
+.light-mode #theme-toggle {
+    color: #000000;
+}
+
+.light-mode .profile:focus {
+    outline: 2px solid #000000;
+}
+
+.light-mode .profile:hover img {
+    border: 1px solid #000000;
+}
+
+/* Modo claro para "Gerenciar perfis" */
+.light-mode .manage-profiles {
+    border-color: #cccccc;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .manage-profiles:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: #000000;
+}
+
+.light-mode .manage-profiles a {
+    color: #666666;
+}
+
+.light-mode .manage-profiles a:hover {
+    color: #000000;
+}
+
+/* Estilos responsivos para diferentes dispositivos */
+
+/* Para dispositivos móveis (até 480px) */
+@media (max-width: 480px) {
+    body {
+        /* Adiciona preenchimento lateral para evitar que o conteúdo toque nas bordas */
+        padding: 0 1rem;
+    }
+
+    header h1 {
+        /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
+        font-size: 1.5rem;
+        /* Reduz a margem inferior */
+        margin-bottom: 2rem;
+    }
+
+    #theme-toggle {
+        font-size: 1.5rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .profiles ul {
+        /* Define como grid para dois perfis por linha */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        /* Remove propriedades flex antigas */
+        padding: 0 2rem;
+        /* Centraliza o container */
+        margin: 0 auto;
+        max-width: 300px; /* Limita a largura para melhor controle */
+    }
+
+    .profile img {
+        /* Reduz ainda mais a largura e altura da imagem para dispositivos móveis */
+        width: 60px;
+        height: 60px;
+    }
+
+    figcaption {
+        /* Reduz ainda mais o tamanho da fonte da legenda */
+        font-size: 0.8rem;
+    }
+
+    .manage-profiles {
+        margin-top: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .manage-profiles a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Para tablets e telas médias (até 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        /* Reduz o tamanho da fonte do título */
+        font-size: 2rem;
+    }
+
+    .profiles ul {
+        /* Reduz o espaço entre os perfis */
+        gap: 0.1rem;
+    }
+
+    .profile img {
+        /* Reduz a largura e altura da imagem */
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Para telas grandes (a partir de 1200px) */
+@media (min-width: 1200px) {
+    header h1 {
+        /* Aumenta o tamanho da fonte para telas grandes */
+        font-size: 4rem;
+        /* Aumenta a margem inferior */
+        margin-bottom: 3rem;
+    }
+
+    .profile img {
+        /* Aumenta o tamanho da imagem para telas grandes */
+        width: 150px;
+        height: 150px;
+    }
+
+    .profiles ul {
+        /* Aumenta o espaço entre os perfis */
+        gap: 3rem;
+    }
+
+    .profile img {
+        /* Aumenta a largura e altura da imagem */
+        width: 200px;
+        height: 200px;
+    }
+
+    figcaption {
+        /* Aumenta o tamanho da fonte da legenda */
+        font-size: 1.5rem;
+    }
+}
