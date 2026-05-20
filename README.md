@@ -66,6 +66,7 @@ cd streamflix
 - Manipulação do DOM com JavaScript
 - Boas práticas de acessibilidade na web
 - Organização de arquivos em um projeto Front-End
+- Utilização de IA como ferramenta de apoio para tirar dúvidas, revisar código e acelerar o aprendizado
 
 ---
 
@@ -75,3 +76,4 @@ Feito com dedicação por **Rower Bomfim**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rower-bomfim-77966b178/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rower.bomfim@hotmail.com)
+
